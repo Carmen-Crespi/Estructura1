@@ -6,10 +6,13 @@ public class EstructuraRosa {
     public static void main(String[] args) {
         
      //   ejercicio3();
-        
-     ejercicio2();
+     
+     //ejercicio2();
+     
+     ejercicio4();
     } 
-                
+         
+
        public  static void ejercicio3(){
 
         int [][] Matriz= new int[3][3];
@@ -80,4 +83,57 @@ public class EstructuraRosa {
 
         }
     }
+        
+        
+        public static  void ejercicio4(){
+        int [][] Matriz= new int[4][4];
+        int errores=0; //cantidad de erroes
+
+        Matriz[0][0]=8;
+        Matriz[0][1]=0;
+        Matriz[0][2]=0;
+        Matriz[0][3]=0;
+
+        Matriz[1][0]=9;
+        Matriz[1][1]=8;
+        Matriz[1][2]=0;
+        Matriz[1][3]=0;
+
+        Matriz[2][0]=1;
+        Matriz[2][1]=3;
+        Matriz[2][2]=4;
+        Matriz[2][3]=0;
+
+        Matriz[3][0]=8;
+        Matriz[3][1]=9;
+        Matriz[3][2]=6;
+        Matriz[3][3]=5;
+
+        //imprimimos las matriz
+        for (int i = 0; i <Matriz.length ; i++) {
+            System.out.println();
+            for (int j = 0; j < Matriz.length; j++) {
+                System.out.print(Matriz[i][j]+" ");
+            }
+        }
+        System.out.println();
+        //verificamos solo los numeros de la esquina superior
+        for (int i = 0; i < Matriz.length; i++) {
+            for (int j = Matriz.length-1; j > i; j--) {
+                if (Matriz[i][j] !=0){
+                    errores++;
+                }
+
+            }
+        }
+
+        if (errores>0){
+            System.out.println("La matriz no es triangular inferior");
+        }else
+        {
+            System.out.println("La matriz es triangular inferior");
+        }
+    }
+        
 }  
+
