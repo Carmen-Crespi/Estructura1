@@ -1,11 +1,14 @@
 
 package estructurarosa;
-
+import java.util.Scanner;
 public class EstructuraRosa {
 
     public static void main(String[] args) {
         
-        ejercicio3(); }
+     //   ejercicio3();
+        
+     ejercicio2();
+    } 
                 
        public  static void ejercicio3(){
 
@@ -50,5 +53,31 @@ public class EstructuraRosa {
     }
     
         
-        
+        public  static void ejercicio2(){
+        Scanner entrada=new Scanner(System.in); //escaner de la consola
+
+        System.out.println("Dime la cantidad de filas  de la matriz");
+        int i =entrada.nextInt(); // Guardo las columnas
+        System.out.println("Dime la cantidad de columnas  de la matriz");
+        int j =entrada.nextInt();// Guardo las filas
+
+        int [][] Matriz= new int [i][j]; //se crea la matriz
+
+
+        for (int x = 0; x <i; x++) {
+            for (int y = 0; y < j; y++) {
+                Matriz[x][y]=(23*(int) Math.pow(x, 4))+(20*(int) Math.pow(y, 3)-3); // se asignan los valores de la matriz por la formula
+            }
+
+        }
+
+        //se imprime la matriz
+        for (int x = 0; x <i; x++) {
+            System.out.println();
+            for (int y = 0; y < j; y++) {
+                System.out.print(Matriz[x][y]+" "); 
+            }
+
+        }
+    }
 }  
